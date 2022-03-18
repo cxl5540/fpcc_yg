@@ -1,0 +1,14 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="container wh">
+    <view style="margin-top: 30rpx;"><text>当前单位会计账号</text></view>
+    <view class="list">
+        <view class="item flex" wx:for="{{list}}" wx:key="index">
+          <view>
+              <view style="margin-right: 20rpx;">
+                <image src="{{item.head_path}}"></image>
+              </view>           
+              <text>{{item.name}}</text>
+          </view> 
+        </view>
+    </view> 
+</view>

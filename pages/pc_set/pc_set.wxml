@@ -1,0 +1,39 @@
+<view class="msg wh">
+  <view class="bold">个人信息设置</view>
+    <view>
+        <view>
+          <text class="need">个人姓名</text>
+          <input type="text"  bindinput='inputWacth' data-model="name" value="{{formData.name}}" placeholder="请输入个人姓名" maxlength="10" />
+        </view>
+        <text>注：设置后个人报销信息将展示此名字</text>
+    </view>
+    <view>
+        <view>
+          <text class="need">所属公司</text>
+          <input type="text"  bindinput='inputWacth' disabled data-model="unit" value="{{formData.unit}}"  placeholder="请选择所属公司" maxlength="10" />
+          <picker  bindchange="choose_type"  value="{{formData.unit}}" data-model="unit"  data-type="unitlist"   range="{{unitlist}}" >
+            选择
+        </picker>
+        </view>
+        <text>注：如选项为空请联系管理员添加</text>  
+    </view>
+    <view>
+        <view>
+          <text class="need">所属部门</text>
+          <input bindinput="inputWacth" disabled data-model="department" value="{{formData.department}}"  placeholder="请输入所属部门" maxlength="10" />
+          <picker  bindchange="choose_type"  value="{{formData.department}}" data-model="department"  data-type="bxbmlist"   range="{{bxbmlist}}" >
+            选择
+        </picker>      
+        </view>
+        <text>注：如选项为空请联系管理员添加</text>
+    </view>
+    <view>
+        <view style="position: relative;">
+          <text class="need">联系电话</text>
+          <input type="number" style="flex:0.4" bindinput="inputWacth"  data-model="tel" value="{{formData.tel}}" disabled />
+        </view>
+        <!-- <text>注：手机号码可以作为PC端的登陆账号使用。<text>\n</text>若首次点击【获取本机号码】失败,请再次点击即可获取成功。</text> -->
+    </view>
+    <button bindtap="submit">提交</button>
+</view>
+

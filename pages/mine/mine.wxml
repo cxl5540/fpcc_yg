@@ -1,0 +1,47 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="container">
+  <view class="hed flex">
+      <text>我的概况</text>
+      <view wx:if="{{info}}"><text style="{{info.team.is_sign_out==false?'background:#999':'background: #3FB5A2'}}" bindtap="esc_team">退出当前绑定单位</text><text bindtap="add_team" style="{{info.team.is_sign_out==true?'background:#999':'background: #3FB5A2'}}">加入其它团队</text></view>
+  </view>
+  <view class="userinfo" style="position: relative;">
+  <image src="{{tools.img+'grzx_bg@2x.png'}}" style="width:100%;height:100%;position: absolute;left: 0;top: 0;"></image>
+    <block wx:if="{{canIUseOpenData}}">
+        <view style="position: relative;margin: 20rpx 0 0 20rpx;top: 40rpx;">
+          <view class="userinfo-avatar" bindtap="getuser">
+              <view wx:if="{{!uid}}" bindtap="getUserProfile" style="width: 100%;height: 100%;background:#fff;color: #333;line-height: 128rpx;text-align: center;"><image style="width: 100%;height: 100%;" src="../../image/logo.png"></image></view>
+              <open-data type="userAvatarUrl"></open-data>            
+          </view>
+        </view>    
+      <view class="msg">
+          <view>个人姓名：{{info.name?info.name:'未命名'}}<mp-icon bindtap="editname" style="margin-left: 10rpx;" icon="pencil" color="black" size="{{20}}" color="white"></mp-icon></view>
+          <view>单位名称：<text>{{info.unit}}</text></view>
+          <view>部门：{{info.department}}</view>
+      </view>
+    </block>
+    <block wx:elif="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile"> 获取头像昵称 </button>
+      <button wx:elif="{{canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <view wx:else> 请使用1.4.4及以上版本基础库 </view>
+    </block>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+</view>
+
+<view class="nume wh" style="position: relative;">
+    <view class="i_t flex" wx:for="{{list}}" wx:key="index"  bindtap="navurl" data-index="{{index}}" data-url="{{item.url}}" style="position: relative;" >
+      <image src="{{tools.img+item.img_u}}"></image>
+      <view>
+          <view>{{item.ti}}</view>
+          <text>{{item.del}}</text>
+      </view>
+      <button style="position: absolute;top: 0;left: 0;height: 100%;width: 100%;background:transparent;" wx:if="{{index==3}}" open-type="contact"></button>
+      <button style="position: absolute;top: 0;left: 0;height: 100%;width: 100%;background:transparent;" wx:if="{{index==4}}" open-type="share"></button>
+      <mp-icon icon="arrow" color="#999999" size="{{15}}"></mp-icon>
+    </view>
+    <button class="msg"  bindtap="getUserProfile"  wx:if="{{!uid}}">授权</button>
+    <button class="tel" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" wx:if="{{!tel}}">手机</button>   
+</view>

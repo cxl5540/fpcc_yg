@@ -1,0 +1,14 @@
+var img_url='https://gg.toommi.com/data/upload/config/';
+var getstr=function(str,num) {
+  if(str!=undefined){
+		var length=str.length;
+		if(length>num){
+			str=str.substring(0,num)
+    }
+		return str;
+	}
+}
+module.exports = {
+  img: img_url,
+  getstr:getstr
+};

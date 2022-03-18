@@ -1,0 +1,56 @@
+<!--pages/archives/archives.wxml-->
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="container wh">
+   <view class="hed">
+      <view class="search">
+        <!-- <view>{{status}}<image src="../../image/fpda_icon_xiala@2x.png"></image></view> -->
+          <view>
+            <picker  bindchange="choose_date" fields='year'  value="{{input_time}}" mode='date' >
+            <view class="picker">
+              {{input_time}}<image style="margin-left: 10rpx;" src="{{tools.img+'fpda_icon_xiala@2x.png'}}"></image>
+            </view>
+          </picker>
+        </view>       
+        <view><image src="{{tools.img+'fpda_icon_sousuo@2x.png'}}"></image><input confirm-type="search"  bindinput="keyval" value="{{key}}" bindconfirm="search" type="text" placeholder="发票代码、号码、报销人进行查询"></input></view>
+      </view>
+   </view>
+    <ul class="nav">
+      <li data-type="0" bindtap="change_type" class="{{active==0?'active':''}}">待审核({{user_info.w_count}})</li>
+      <li data-type="1" bindtap="change_type" class="{{active==1?'active':''}}">待处理({{user_info.n_count}})</li>
+      <li data-type="2" bindtap="change_type" class="{{active==2?'active':''}}">已完成({{user_info.y_count}})</li>
+    </ul>
+      <view class="list">
+          <scroll-view
+            scroll-y style="width: 100%; height:{{tabHeiaght}}px;"
+            refresher-enabled="{{true}}"
+            refresher-threshold="{{100}}"
+            refresher-default-style="black"
+            refresher-background=""
+            refresher-triggered="{{triggered}}"
+            bindrefresherpulling="onPulling"
+            bindscrolltolower='scrollToLower'
+            bindrefresherrefresh="onRefresh"
+      >
+            <view class="item" wx:for="{{list}}" data-active="{{active}}" wx:key="index"  bindtap="detail" data-year="{{item.year}}" data-id="{{item.id}}">
+              <view class="flex">
+                  <text>{{item.seller_name}}</text>          
+                  <view style="{{active==0?'background:#E8F9D6;color:#55A500':active==1?'background:#FFE6E6;color:#E00000':'background:#DCDCDC;color:#666666'}}">{{active==0?'待审核':active==1?'待处理':'已完成'}}</view>
+              </view>
+              <view>代码：{{item.invoice_code}} <text style="margin-left:10rpx"> 号码：{{item.invoice_num}}</text></view>
+              <view><text>￥</text><text class="bold" style="font-size:36rpx"> {{item.amount_in_figuers}}</text>(税额：{{item.total_tax}}) <view style="{{item.is_verification==1?'background:#EEEEEE;color:#999999E':item.is_verification==2?'background:#E8F9D6;color:#55A500':'background:#FFE6E6;color:#E00000'}}">{{item.is_verification==1?'未验真':item.is_verification==2?'正常':'异常'}}</view>
+              <view style="{{item.script_path?'background:#D3F1FF;color:#0097DE':'background:#FFE5D1;color:#FF5A00'}}">
+                <image style="width: 22rpx;height: 22rpx;" src="{{item.script_path?tools.img+'icon_dui@2x.png':tools.img+'icon_cuo@2x.png'}}"></image>原件
+              </view>
+              
+              </view>
+              <view class="flex">
+                <text>提交人：{{item.uname}}</text>
+                <text>录入时间：{{tools.getstr(item.create_time,11)}}</text>
+              </view>
+            </view>
+            <view class='data-loading' style="text-align: center;">
+               {{is_data?'数据加载中...':'无更多数据...'}} 
+            </view>
+       </scroll-view>
+   </view>
+</view>

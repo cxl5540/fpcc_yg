@@ -1,0 +1,330 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "首页",
+          "pathName": "pages/index/index",
+          "query": "str='2021,1;2021,3;2020,1'&sucessUp='3'&fialUp='1'",
+          "scene": null
+        },
+        {
+          "name": "我的发票",
+          "pathName": "pages/archives/archives",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "帮助",
+          "pathName": "pages/help/help",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人中心",
+          "pathName": "pages/mine/mine",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "台账下载",
+          "pathName": "pages/act_down/act_down",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "进项抵扣",
+          "pathName": "pages/jingxdk/jingxdk",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "凭证号补录",
+          "pathName": "pages/ping_zhbl/ping_zhbl",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发票抬头管理",
+          "pathName": "pages/fp_tt/fp_tt",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发票抬头新增",
+          "pathName": "pages/fp_tt_add/fp_tt_add",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "抬头编辑",
+          "pathName": "pages/fp_tt_edit/fp_tt_edit",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "抬头管理部门",
+          "pathName": "pages/fp_tt_part/fp_tt_part",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "团队绑定设置",
+          "pathName": "pages/fp_tt_people/fp_tt_people",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "团队管理",
+          "pathName": "pages/team_set/team_set",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "抬头权限设置",
+          "pathName": "pages/team_set_tt/team_set_tt",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "权限设置",
+          "pathName": "pages/team_set_qx/team_set_qx",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "查看单位",
+          "pathName": "pages/team_set_ck/team_set_ck",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "团队设置",
+          "pathName": "pages/team_tt_sz/team_tt_sz",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发票费用科目维护",
+          "pathName": "pages/mine_kmwh/mine_kmwh",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "电脑版",
+          "pathName": "pages/pc/pc",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "账号设置",
+          "pathName": "pages/pc_set/pc_set",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "私有化部署",
+          "pathName": "pages/siyhbs/siyhbs",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "系统对接",
+          "pathName": "pages/system_dj/system_dj",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "获取正式版",
+          "pathName": "pages/get_zsb/get_zsb",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "加入邀请码",
+          "pathName": "pages/yaoqm/yaoqm",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "员工邀请码",
+          "pathName": "pages/yg_yaoqm/yg_yqm",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "会计邀请码",
+          "pathName": "pages/kj_yaoqm/kj_yaoqm",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "购买记录",
+          "pathName": "pages/orderlist/orderlist",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "会员购买详情",
+          "pathName": "pages/buydel_hy/buydel_hy",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "加购详情",
+          "pathName": "pages/buydel_jg/buydel_jg",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "企业购买详情",
+          "pathName": "pages/buydel_qy/buydel_qy",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "扫码器购买详情",
+          "pathName": "pages/buydel_smq/buydel_smq",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "会员加购",
+          "pathName": "pages/buy_jg/buy_jg",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "开票记录",
+          "pathName": "pages/kaipiao_list/kaipiao_list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "归集录入",
+          "pathName": "pages/jingxdk_lr/jingxdk_lr",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发票数据统计",
+          "pathName": "pages/jingxdk_list/jingxdk_list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "台账详情",
+          "pathName": "pages/jingxdk_del/jingxdk_del",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "台账下载列表",
+          "pathName": "pages/act_list/act_list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "文章推荐",
+          "pathName": "pages/news/news",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "开发票",
+          "pathName": "pages/kaifapiao/kaifapiao",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "开电子发票",
+          "pathName": "pages/kaifapiao_edit/kaifapiao_edit",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "手工录入",
+          "pathName": "pages/shoug_lr/shoug_lr",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "ocr原件导入",
+          "pathName": "pages/ocr_yj_edit/ocr_yj_edit",
+          "query": "year=2021&id=1",
+          "scene": null
+        },
+        {
+          "name": "我的发票已完成",
+          "pathName": "pages/repeat_lr/repeat_lr",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "导入列表",
+          "pathName": "pages/daoru_list/daoru_list",
+          "query": "str=2021,1;2021,3;2021,1&successUp=3&failUp=1",
+          "scene": null
+        },
+        {
+          "name": "发票待审核",
+          "pathName": "pages/fapiao_dsh/fapiao_dsh",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发票待补交",
+          "pathName": "pages/fapiao_dbj/fapiao_dbj",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发票待审核详情",
+          "pathName": "pages/fapiao_dsh_del/fapiao_dsh_del",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的发票待处理",
+          "pathName": "pages/fapiao_dbj_del/fapiao_dbj_del",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发票查验详情",
+          "pathName": "pages/fapiao_dsh_pass/fapiao_dsh_pass",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我的发票-待审核",
+          "pathName": "pages/saoma_del/saoma_del",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "订单支付",
+          "pathName": "pages/pay/pay",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "拍照",
+          "pathName": "pages/camera/camera",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,11 @@
+
+<view class="msg wh">
+  <view class="bold">请输入员工授权码</view>
+  <view>
+        <view>
+          <text class="need lgzneed">授权码</text>
+          <input bindinput="code" type="text" value="{{code}}"  placeholder="请输入员工授权码，从财务处获得" maxlength="10" />
+        </view>
+    </view>
+    <button bindtap="submit">提交</button>
+</view>

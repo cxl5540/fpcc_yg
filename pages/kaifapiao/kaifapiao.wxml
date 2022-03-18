@@ -1,0 +1,39 @@
+<view class="hed flex">
+      <text>历史购买记录</text>
+      <view bindtap="kaipiao_list"><text>开票记录</text></view>
+  </view>
+<view class="container wh">
+  <view class="list">
+          <scroll-view
+            scroll-y style="width: 100%; height: 400px;"
+            refresher-enabled="{{true}}"
+            refresher-threshold="{{100}}"
+            refresher-default-style="black"
+            refresher-background=""
+            refresher-triggered="{{triggered}}"
+            bindrefresherpulling="onPulling"
+            bindrefresherrefresh="onRefresh"
+      >
+            <view class="item" wx:for="{{list}}" wx:key="*this">            
+              <view class="flex">
+                  <text>订单编号：0000000000000000000</text>          
+                  <view>已完成</view>
+              </view>
+              <view class="flex">
+                  <view><radio value="r1" color="#FF9F06" checked="true"/></view>
+                  <view class="rt">
+                    <view>会员购买</view>
+                    <view>时长1年，会计数3人，员工数10人，验真/识别50次，开通扫码枪模块</view>
+                    <view>
+                        合计：<text>¥1980</text>                   
+                    </view>
+                  </view>
+              </view>            
+            </view>
+       </scroll-view>
+   </view>
+   <view class="btns flex">
+      <view>全选</view>
+      <view bindtap="kaifapiao_edit">去开票（共1个订单，¥1980.00）</view>
+   </view>
+</view>

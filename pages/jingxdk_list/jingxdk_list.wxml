@@ -1,0 +1,61 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<picker1 id='picker' 
+    initValue='0'
+    items='{{demoPickerSource}}'
+    bind:confirm="_confirmeventtype">
+</picker1>
+<view class="container wh">
+   <view class="hed">
+      <view class="search" style="margin: 30rpx 0;">         
+        <view style="width: 100%;">
+        <image style="width: 32rpx;height: 32rpx;" src="{{tools.img+'fpda_icon_sousuo@2x.png'}}"></image>
+        <input style="width: 85%;" type="text" placeholder="请输入发票代码、号码、报销人进行查询"></input></view>
+      </view>
+      <view class="date">
+        <text>录入时间</text>
+        <picker  bindchange="stdate" fields='month' value="{{st_date}}" mode='date' >
+          <view class="picker">
+            {{st_date}}<image src="{{tools.img+'fpda_icon_rili@2x.png'}}"></image>
+          </view>
+        </picker>
+        ~
+        <picker  bindchange="endate"  fields='month' value="{{en_date}}" mode='date' >
+          <view class="picker">
+            {{en_date}}<image src="{{tools.img+'fpda_icon_rili@2x.png'}}"></image>
+          </view>
+        </picker>
+      </view>
+      <view class="li_t">
+        <image src="{{tools.img+'fpda_icon_data@2x.png'}}"></image>
+        共报销金额<text  class="bold" style="color:#E00000">￥800.00</text>，共已审金额<text class="bold"  style="color:#E00000">￥800.00</text>
+      </view>
+   </view>
+   <view class="list">
+          <scroll-view
+            scroll-y style="width: 100%; height: 400px;"
+            refresher-enabled="{{true}}"
+            refresher-threshold="{{100}}"
+            refresher-default-style="black"
+            refresher-background=""
+            refresher-triggered="{{triggered}}"
+            bindrefresherpulling="onPulling"
+            bindrefresherrefresh="onRefresh"
+      >
+            <view class="item" wx:for="{{list}}" wx:key="index"  style="height: 246rpx;">
+              <view >
+                  <text>{{item.sj}}</text>                       
+              </view>
+              <view class="flex" style="margin-top: 20rpx;"> 
+                  <view>
+                      <view>报销发票:<text style="font-weight: bold;color: #44C6AD;margin:0 10rpx">3666</text>张</view>
+                      <view style="margin-top: 20rpx;">报销发票:<text style="font-weight: bold;color: #44C6AD;margin:0 10rpx">3</text>张</view>
+                  </view>
+                  <view>
+                      <view>报销发票:<text style="font-weight: bold;color: #44C6AD;margin:0 10rpx">344</text>张</view>
+                      <view style="margin-top: 20rpx;">报销发票:<text style="font-weight: bold;color: #44C6AD;margin:0 10rpx">3</text>张</view>
+                  </view>
+              </view>   
+            </view>
+       </scroll-view>
+   </view>
+</view>

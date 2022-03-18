@@ -1,0 +1,74 @@
+/**app.wxss**/
+.container {
+  height: 100%;
+  box-sizing: border-box;
+} 
+page{
+  color: #333333;
+  font-size: 28rpx;
+  --tc:#3FB5A2;
+  --f_s:28rpx;
+ 
+}
+.box-line{
+  box-shadow: 0px 0px 15rpx 0px rgba(40, 112, 105, 0.15);
+  border-radius: 10rpx;
+}
+.w_c{
+  color: #ffffff;
+}
+.bold{
+  font-weight: bold;
+}
+.wh{
+  width: 94%;
+  margin: auto;
+}
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.radius{
+  box-shadow: 0px 0px 15rpx 0px rgba(40, 112, 105, 0.2);
+    border-radius: 10rpx;
+}
+input{
+  text-align: left;
+}
+.wx-switch-input::before {
+  background: #BFBFBF !important;
+}
+.van-stepper__input{
+  width: 150rpx !important;
+}
+.van-stepper__input,.van-stepper__plus,.van-stepper__minus{
+  background: #ffffff !important;
+}
+.weui-tabs-bar__wrp{
+  height: 88rpx;
+  display: flex;
+  align-items: center;
+}
+button{
+  font-size: 28rpx !important;
+  font-weight: 400 !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+.need{
+  position: relative;
+}
+.need::after{
+  content: '*';
+  position: absolute;
+  right: 26rpx;
+  top: 0;
+  color: red;
+}
+.sgzneed::after{
+ right: 50rpx;
+ }
+ .lgzneed::after{
+   right: 80rpx;
+ }

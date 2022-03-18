@@ -1,0 +1,115 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="container">
+  <view class="inpts">
+    <view>
+        <text>发票类型</text>
+        <input type="text" value="{{type}}"  />
+    </view>
+    <view>
+        <text  class="need">发票代码</text>
+        <input type="text" />
+    </view>
+    <view>
+        <text class="need">发票日期</text>
+        <input type="" />
+    </view>
+    <view>
+        <text>效验码</text>
+        <input type="text" />
+    </view>
+    <view>
+        <text class="need">发票金额</text>
+        <input type="text" />
+    </view>
+    <view>
+        <text>税率(%)</text>
+        <input type="text" />
+    </view>
+    <view>
+        <text>价税合计</text>
+        <input type="text" />
+    </view>
+    <view>
+        <text>销方名称</text>
+        <input type="text" />
+    </view>
+    <view>
+        <text>销方税号</text>
+        <input type="text" />
+    </view>
+    <view>
+        <text>购方名称</text>
+        <input type="text" />
+    </view>
+    <view>
+        <text>购方税号</text>
+        <input type="text" />
+    </view>
+  </view>
+  <view class="inpts">
+      <view class="flex del">
+          <view>发票原件.jpg（点击预览）</view>
+          <text style="background: #62BF00;">移除</text>
+      </view>
+  </view>
+  <view class="inpts">
+    <view>
+        <text class="need">报销人员</text>
+        <input type="text" />
+    </view>
+    <view>
+        <text>报销公司</text>
+        <input type="text" />
+    </view>
+    <view>
+        <text>报销部门</text>
+        <input type="text"  />
+    </view>
+    <view>
+        <text>报销凭证</text>
+        <input type="text" />
+    </view>
+    <view>
+        <text>项目摘要</text>
+        <input type="text" />
+    </view>
+    <view>
+        <text>费用类型</text>
+        <input type="text" />
+    </view>
+    <view>
+        <text>备注</text>
+        <input type="text"  />
+    </view>
+    <view>
+        <text>审核意见</text>
+        <input type="text"  />
+    </view>
+  </view>
+  <view class="inpts">
+    <view class="upload">
+        <text>真伪验真</text>
+        <input disabled />
+        <view class="flex" style="top:22rpx;">
+            <button style="background: #44C6AD;width:173rpx;color:#fff;height:54rpx;line-height:54rpx">查重真伪</button>
+            <text style="margin-left: 60rpx;color: #62BF00 ;">已验真--发票正常</text>
+        </view>
+    </view>   
+      <view>
+        <text>上传人员</text>
+        <input type="text" />
+      </view>
+      <view>
+        <text>录入时间</text>
+        <input type="text" />
+      </view>
+    </view>
+  <view class="btn flex" style="box-sizing: border-box;padding: 20rpx;">
+      <view style="background:#F24F4F;width: 237rpx;">不通过</view>
+      <view style="background:#44C6AD;width: 440rpx;" bindtap="fapiao_dsh_pass">通过</view>
+  </view>
+  <view  style="position: fixed;right: 0;top: 140rpx;">
+    <image src="{{tools.img+'yz_zc@2x.png'}}" style="width: 280rpx;height: 200rpx;"></image>
+  </view>
+ 
+</view>

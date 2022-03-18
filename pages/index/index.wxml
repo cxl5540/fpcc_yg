@@ -1,0 +1,77 @@
+<wxs src='../../tools.wxs'  module="tools"></wxs>
+<view class="container">
+  <swiper class="home-swiper" indicator-dots="true" autoplay="true" interval="5000" duration="500"  circular="true" indicator-active-color='#FFFFFF' indicator-color='rgba(255,255,255,.5)'>
+    <block wx:for="{{imgList}}" wx:key='*this'>
+      <swiper-item>
+        <image src="{{tools.img+item.url}}" class="slide-image" />
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class="num">
+    <view wx:for="{{numList}}" wx:key='*this' bindtap="navurl" data-url="{{item.url}}">
+      <text style="font-size:24rpx">{{item.title}}</text>
+      <view><text class="bold">{{item.num}}</text>张</view>
+    </view>
+  </view>
+  <view class="tools w_c">
+      <view class="rt">
+        <view catchtap="getScancode">
+              <image src="{{tools.img+'ygsy_img1@2x.png'}}"></image>
+              <view>
+                <view>扫码查重/审核</view>
+                <view>扫码查重/审核</view>
+              </view>                         
+          </view>
+          <view bindtap="camera">
+              <image src="{{tools.img+'ygsy_img2@2x.png'}}"></image>
+              <view>
+                <view>发票识别</view>
+                <view>通过拍照发票图片对发票进行查重或审核</view>
+              </view> 
+          </view>
+          <view bindtap="shoug_lr" style="color: #666;">
+              <image src="{{tools.img+'ygsy_img3@2x.png'}}"></image>
+              <view>
+                <view>手动录入查重</view>
+                <view>手动输入发票信息进行查重或审核</view>
+              </view> 
+          </view>
+          <view bindtap="chooseInvoice" style="color: #666;">
+              <image src="{{tools.img+'ygsy_img4@2x.png'}}"></image>
+              <view>
+                <view>微信票夹导入</view>
+                <view>微信票夹导入发票进行查重或审核</view>
+              </view> 
+          </view>
+          <view bindtap="operation_verify" style="color: #666;">
+              <image src="{{tools.img+'ygsy_img5@2x.png'}}"></image>
+              <view>
+                <view>微信记录导入</view>
+                <view>微信对话记录导入发票进行查重或审核</view>
+              </view> 
+          </view>
+          <button  class="msg" catchtap="getUserProfile"  wx:if="{{!uid}}">授权</button>
+          <button class="tel" open-type="getPhoneNumber" bindgetphonenumber="getPhoneNumber" wx:if="{{!tel}}">手机</button>
+      </view>
+  </view>
+  <mp-half-screen-dialog 
+    bindbuttontap="buttontap"
+    show="{{show}}"
+    closabled="{{false}}"
+    maskClosable="{{true}}" >
+    <view slot='footer' class="flex">
+        <view  bindtap="chooseInvoice">
+            <image style="width:120rpx;height:120rpx" src="{{tools.img+'sy_kbdr@2x.png'}}"></image>
+            <view>微信卡包导入</view>
+        </view>
+        <view  bindtap="uploadpdf">
+            <image style="width:120rpx;height:120rpx" src="{{tools.img+'sy_ltdr@2x.png'}}"></image>
+            <view>微信聊天导入</view>
+        </view>
+    </view>
+</mp-half-screen-dialog>
+</view>
+<!-- <view class="molde">qq</view> -->
+
+
+
